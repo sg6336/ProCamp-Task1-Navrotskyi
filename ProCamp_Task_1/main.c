@@ -206,20 +206,20 @@ void task7_main_divisible()
 	printf("Task 7: numbers (1-500) which are divisible by a number \n");
 	printf("Start \n\n");
 
-	int number_from_user;
+	int n;
 	int temp = 500;
 	int i = 0, d = 0;
 
 	printf("Enter a number (integer): ");
-	while (scanf("%d", &number_from_user) != 1)	{
+	while (scanf("%d", &n) != 1)	{
 		printf("Please enter an integer: ");
 		while (getchar() != '\n');
 	}
 
 	printf("\nAnswer: ");
-	while (i < temp)	{
+	while (i < temp || i <= n) {
 		i++;		
-		d = divisible(number_from_user, i);
+		d = divisible(n, i);
 		if (d == -1)
 			continue;
 		else
