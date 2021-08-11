@@ -1,16 +1,30 @@
-/*
-* Write a program that computes the perimeter and the area of a
-* circle with a radius of 6
-*/
+// Task5:
+// Write a program that computes the perimeter and the area of a
+// circle with a radius of 6
 
 // perimetr = 2 * pi * r
 // area = pi * r^2
 
-#define _USE_MATH_DEFINES // for C
-#include <math.h>
+#include "ProCamp_Task_5_circle.h"
 
-//#define M_PI acos(-1.0)
-//#define PI 3.14159265358979323846 // long double
+void task5_main_circle()
+{
+	printf("Task 5: the perimeter and the area of the circle \n");
+	printf("Start \n\n");
+
+	float radius = 6.0;
+
+	printf("radius = %f \n", radius);
+
+	long double perimeter = circle_perimeter(radius);
+	long double area = circle_area(radius);
+
+	printf("Perimeter of the Circle = %.20Lf \n", perimeter);
+	printf("Area of the Circle = %.20Lf square \n\n", area);
+
+	printf("Task 5: the perimeter and the area of the circle \n");
+	printf("Stop \n\n");
+}
 
 long double circle_perimeter(float radius)
 {
