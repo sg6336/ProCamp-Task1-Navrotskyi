@@ -3,10 +3,10 @@
 * 500 which are divisible by a number received from a user
 */
 
-int divisible(int n, int i) 
+int divisible(int temp, int n, int i) 
 {
-    if (n % i == 0)
-        return i;
+    if (n * i <= temp)
+        return n * i;
 
     return -1;
 }

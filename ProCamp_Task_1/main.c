@@ -37,11 +37,11 @@
 
 int main() {
 
-	//task2_main_swap();
-	//task3_main_RGB888_to_RGB565();
-	//task4_main_inches();
-	//task5_main_circle();
-	//task6_main_factorial();
+	task2_main_swap();
+	task3_main_RGB888_to_RGB565();
+	task4_main_inches();
+	task5_main_circle();
+	task6_main_factorial();
 	task7_main_divisible();
 
 	return 0;
@@ -217,11 +217,11 @@ void task7_main_divisible()
 	}
 
 	printf("\nAnswer: ");
-	while (i < temp || i <= n) {
+	while (i <= temp) {
 		i++;		
-		d = divisible(n, i);
+		d = divisible(temp, n, i);
 		if (d == -1)
-			continue;
+			break;
 		else
 			printf("%d ", d);
 	}
